@@ -6,4 +6,4 @@ before_install:
     - docker build -t pramaku/docker-react-img -f Dockerfile.dev .
 
 script:
-    - docker run pramaku/docker-react-img npm run test -- --coverage
+    - docker run -e CI=true pramaku/docker-react-img npm run test
